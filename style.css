@@ -114,9 +114,13 @@ h2 {
   font-weight: 300;
 }
 
-#socrates-quote {
+section {
+  padding: 0.5rem 2rem;
+}
+
+blockquote {
   font-size: 1rem;
-  margin: 3rem 0;
+  margin: 2.5rem 0;
   text-align: center;
 }
 
@@ -128,8 +132,10 @@ h2 {
   width: 0;
 }
 
-section {
-  padding: 0.5rem 2rem;
+#reviews {
+  blockquote {
+    text-align: justify;
+  }
 }
 
 h3 {
@@ -222,13 +228,13 @@ sup {
     font-size: 1.5rem;
   }
 
-  #socrates-quote {
-    font-size: 1.125rem;
-  }
-
   section {
     align-self: center;
     max-width: 48rem;
+  }
+
+  blockquote {
+    font-size: 1.125rem;
   }
 
   #about-me {
