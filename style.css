@@ -7,102 +7,65 @@
 
 * {
   box-sizing: border-box;
-}
-
-html {
-  scroll-padding-top: 5.375rem;
+  margin: 0;
 }
 
 body {
+  align-items: center;
   background-color: var(--theme-lightest);
   color: var(--theme-darkest);
   display: flex;
   flex-direction: column;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1.125rem;
+  font-size: 18px;
   margin: 0;
+  text-align: justify;
 }
 
-#menubar {
-  align-items: center;
-  display: flex;
-  padding: 1.5rem 1rem;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  z-index: 1;
+a {
+  color: inherit;
 }
 
-#logo {
-  color: var(--theme-lightest);
-  flex-grow: 1;
-  font-size: 1.75rem;
-  font-weight: 300;
+blockquote {
+  margin: 1.5rem 0;
+  font-size: 16px;
 }
 
-#menu {
+img {
+  width: 100%;
+}
+
+section {
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+#titlebar {
   background-color: var(--theme-dark);
   color: var(--theme-lightest);
-  display: none;
-  left: 0;
-  height: 100dvh;
-  padding: 1.5rem 1rem;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 100vw;
+  padding: 1.5rem;
+  position: fixed;
+  width: 100%;
 
-  &.visible {
-    display: flex;
-    flex-direction: column;
+  & h1 {
+    font-weight: 300;
   }
-
-  & .menu-toggle:not(a) {
-    align-self: flex-end;
-    margin-bottom: 2.5rem;
-  }
-
-  & a {
-    color: inherit;
-    margin: 1.25rem 0;
-    text-decoration: none;
-    font-size: 2.25rem;
-  }
-
-  & a.cta {
-    align-self: center;
-    background-color: var(--theme-lightest);
-    color: var(--theme-dark);
-    padding: 1rem 2rem;
-  }
-}
-
-.menu-toggle {
-  cursor: pointer;
-  font-size: 2rem;
-}
-
-.menu-toggle-bar {
-  background-color: white;
-  height: 0.125rem;
-  margin: 0.5rem 0;
-  width: 1.625rem;
 }
 
 #splash {
   background-color: var(--theme-dark);
   color: var(--theme-lightest);
-  margin-bottom: 2rem;
   padding: 8rem 0 3rem;
   text-align: center;
+  width: 100%;
 
   & h1 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 3rem;
   }
 }
 
 h1 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.625rem;
 }
 
@@ -111,39 +74,30 @@ h2 {
   font-weight: 300;
 }
 
+h3 {
+  font-size: 1.75rem;
+  margin: 1.75rem 0;
+}
+
 .social {
   column-gap: 2rem;
   display: flex;
   justify-content: center;
   margin-top: 3rem;
+}
 
-  & a {
-    color: var(--theme-lightest);
-  }
+.divider {
+  align-self: flex-start;
 }
 
 a.cta {
-  align-self: center;
-  border: solid 0.375rem;
+  border: solid 0.25rem;
   border-color: var(--theme-dark);
-  color: inherit;
-  display: inline-block;
   font-weight: 100;
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  margin: 1.75rem 0;
   padding: 1rem 2rem;
   text-decoration: none;
-}
-
-section {
-  padding: 0.5rem 1.75rem;
-  width: 100%;
-}
-
-blockquote {
-  font-size: 1rem;
-  margin: 1.5rem 0;
-  text-align: justify;
 }
 
 .divider {
@@ -154,26 +108,8 @@ blockquote {
   width: 0;
 }
 
-#reviews {
-  blockquote {
-    text-align: justify;
-  }
-}
-
-h3 {
-  font-size: 1.75rem;
-  margin: 1.5rem 0;
-}
-
-img#hero {
-  align-self: center;
-  max-width: max-content;
-  max-height: max-content;
-  width: 100vw;
-}
-
 p {
-  margin: 1.5rem 0;
+  margin: 1.75rem 0;
 }
 
 ul {
@@ -186,47 +122,16 @@ sup {
 
 /* Desktop View */
 @media screen and (min-width: 768px) {
-  html {
-    scroll-padding-top: 6.25rem;
-  }
-
   #logo {
     font-size: 2rem;
   }
 
-  #menubar {
-    & > .menu-toggle {
-      display: none;
-    }
+  blockquote {
+    font-size: 1.125rem;
   }
 
-  #menu {
-    align-items: center;
-    background-color: unset;
-    display: flex;
-    height: unset;
-    padding: unset;
-    position: relative;
-    width: unset;
-
-    &.visible {
-      display: inherit;
-      flex-direction: inherit;
-    }
-
-    & > .menu-toggle:not(a) {
-      display: none;
-    }
-
-    & a {
-      font-size: 1.125rem;
-      margin: 0 1rem;
-    }
-
-    & a.cta {
-      margin-right: 0;
-      padding: 1rem 1.5rem;
-    }
+  img {
+    max-width: 45rem;
   }
 
   h1 {
@@ -238,11 +143,6 @@ sup {
   }
 
   section {
-    align-self: center;
     max-width: 48rem;
-  }
-
-  blockquote {
-    font-size: 1.125rem;
   }
 }
