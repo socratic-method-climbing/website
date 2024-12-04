@@ -93,11 +93,19 @@ h3 {
 a.cta {
   border: solid 0.25rem;
   border-color: var(--theme-dark);
+  display: block;
   font-weight: 100;
   font-size: 1.5rem;
   margin: 1.75rem 0;
   padding: 1rem 2rem;
+  text-align: center;
   text-decoration: none;
+  width: 100%;
+
+  &.inverse {
+    background-color: var(--theme-dark);
+    color: var(--theme-lightest);
+  }
 }
 
 .divider {
