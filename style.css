@@ -108,6 +108,10 @@ a.cta {
   width: 0;
 }
 
+.spots-remaining {
+  color: red;
+}
+
 p {
   margin: 1.75rem 0;
 }
